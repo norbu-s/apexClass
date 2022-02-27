@@ -1,0 +1,27 @@
+public class LeadSearch
+{
+    public static void SearchLeadRecords(string searchText)
+    {
+        if(searchText != null && searchText != '')
+        {
+            string leadRecordQuery = 'Select id, firstname, lastname, email,fax from Lead';
+
+            if(Pattern.matches('^[a-zA-Z0-9._|\\\\%#~~=?&/$^*!}{+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$', searchText))
+            {
+                system.debug('Input Value is and Email ID.');
+            }
+            else 
+                {
+                    system.debug('Input value is a string.');
+                    leadRecordQuery += 'Where lastname =: searchText';
+                }
+            List<Lead> 1stLeads = Database.Query(leadRecordsQuery);
+            system.debug('Collection size is ....: ' + 1stLeads.size());
+
+            for(Lead ld : 1stLeads)
+            {
+            system.debug('Lead record is...: ' + ld);
+            }
+        }
+    }
+}

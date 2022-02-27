@@ -1,0 +1,19 @@
+public class DynamicSOQLLike
+{
+    piblic static void SearchAccount(string Text)
+    {
+        if(searchText != null && searchText !+= '')
+        {
+            serachText += '%';
+            List<Account> 1stAccount =[Select Id, name, rating, industry, annualrevenue, active__C,
+                                                    from Account 
+                                                            Where name like : searchText];
+            system.debug('Collection Size is ....: ' + 1stAccount.size());
+
+            for (Account acc: 1stAccounts)
+            {
+                system.debug('Account Record is .... ' + acc);
+            }
+        }
+    }
+}

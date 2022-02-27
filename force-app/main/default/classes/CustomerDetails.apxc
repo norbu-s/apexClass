@@ -1,0 +1,8 @@
+//Define a class to Manage the Customer Details and Assign Values and Print the Values
+
+public class CustomerDetails
+{
+    public string Name;
+    public string Phone;
+    public string Email;
+} 

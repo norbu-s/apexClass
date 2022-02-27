@@ -1,0 +1,10 @@
+//Define a class to Manage the Employee Details and Assign Values and Print the Values
+
+public class EmployeeDetails
+{
+    public string FirstName;
+    public string LastName;
+    public string Phone;
+    public string Email;
+    public integer EmployeeId;
+}

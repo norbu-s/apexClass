@@ -1,0 +1,11 @@
+//Define a class to Manage the Student Details and Assign Values and Print the Values
+
+public class StudentDetails
+{
+    public string FirstName;
+    public string LastName;
+    public string Phone;
+    public string Email;
+    public integer StudentNumber;
+    public integer Level;
+}

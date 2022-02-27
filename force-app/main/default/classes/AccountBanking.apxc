@@ -1,0 +1,20 @@
+public class AccountBanking 
+{
+    public static void GetBankingContacts()
+    { 
+        //Getting the bankng Account Records with ID's.
+        Map<ID, Account> mapAccounts = newMap<ID,Account>([Select id, name, industry 
+                                                           		from Account 
+                                                           				Where industry  ='Banking']);
+        
+        if (!mapAccount.isEmpty())
+        {
+            for (Contact con: [Select id, firstname, lastname, email, title, phone, account:id From Contact
+                              Where accountid IN : mapAccounts.keySet() ])
+            {
+                system.debug('Contact Record is  ...: '+ con);
+            }
+        }
+    }
+
+}

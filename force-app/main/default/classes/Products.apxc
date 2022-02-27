@@ -1,0 +1,21 @@
+public class ProductDetails
+{
+	private string productName;
+	private integer productCode;
+	private integer unitPrice;
+	private date expiryDate;
+    public static Product2(string pName, integer pCode, integer pCost, date pDate)
+
+   	{
+    	productName = pName;
+    	productCode = pCode;
+    	unitPrice = pCost;
+    	expiryDate = pDate
+
+	}
+		public void showProductDetails()
+    	    system.debug.('Product Name is  ' + productName);
+			system.debug.('Product Code is  ' + productCode);
+			system.debug.('Product Cost per unit is  ' + unitPrice);
+    	    system.debug.('Product expiry date is  ' + expiryDate.format());
+   }

@@ -1,0 +1,15 @@
+public class HMWhere 
+{
+    public static void GetNoidaHRRecords()
+    {
+        List<Hiring_Manager__C> Hmr = [Select id, name, Location__c, Contact_Number__c, Email__id__c from Hiring_Manager__c Where Location__c = 'Noida'];
+        system.debug('Collection size is ...: ' + Hmr.size());
+        if(! Hmr.isEmpty())
+        {
+            for(Hiring_Manager__c hr : Hmr)
+            {
+              system.debug('Hiring Manager Record ... '+ hr);
+            }
+        }
+    }  
+}

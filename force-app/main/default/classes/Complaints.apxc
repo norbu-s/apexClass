@@ -1,0 +1,11 @@
+//Define a class to Manage the Customer Complaints and Assign Values and Print the Values
+
+public class Complaint
+{
+    public string Name;
+    public string Phone;
+    public string Email;
+    public integer CaseNumber;
+    public string Priority;
+    public string Description;
+} 
