@@ -1,0 +1,19 @@
+public class AccSoql1 
+{
+	public static void GetAllAccountsRecords()
+    {
+        List<Account> AllAcc = [Select Id, Name, rating, industry, annualrevenue from Account];
+    	
+    	if (! AllAcc.isEmpty())
+            
+            for (Account acc : AllAcc)
+        {
+            system.debug('Account Id is... :'+acc.id);
+            system.debug('Account Name is... :'+acc.name);
+			system.debug('Account Rating is... :'+acc.rating);
+            system.debug('Account Industry is... :'+acc.industry);
+            system.debug('Account Annual Revenue is... :'+acc.annualrevenue);
+           	system.debug('================================'');
+        }
+    }
+}

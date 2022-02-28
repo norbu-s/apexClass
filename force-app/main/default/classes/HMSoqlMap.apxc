@@ -1,0 +1,17 @@
+public class HMSoqlMap
+{
+public static void GetAllHRRecords()
+    {
+        Map <ID,Hiring_Manager__c> mapHRRRecords = new Map<ID Hiring_Manager__c>([ Select id, name, location__c from Hiring_Manager__c]);
+        
+        system.debug('Collection size is  ..... '+ HiringManager.size());
+
+        if (! HiringManager.isEmpty())
+        {
+        for(Hiring_Manager__c hr : mapHRRRecords.Values())
+        {
+            system.debug('Account Id is ..: '+ hr);
+        }
+       }
+    }
+}

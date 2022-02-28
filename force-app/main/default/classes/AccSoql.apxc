@@ -1,0 +1,15 @@
+public class AccSoql
+{
+    public static void GetAllAccountsRecords()
+    {
+        List<Account> FirstAccounts = [ Select id, name rating, industry phone, active__c from Account];
+        system.debug('Collection size is  ..... '+ FirstAccounts.size());
+
+        if (! FirstAccounts.isEmpty)
+
+        for(Account acc : FirstAccounts )
+        {
+            system.debug('Account Id is ..: '+acc.id);
+        }
+    }
+}
